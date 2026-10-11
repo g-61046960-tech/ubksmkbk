@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE STOP CENTRE UBK SMKBK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5B21B6',
+                        secondary: '#7C3AED',
+                        accent: '#C4B5FD',
+                        dark: '#1E1B4B',
+                        light: '#F5F3FF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .card-hover { @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:bg-secondary/10; }
+            .scroll-smooth { scroll-behavior: smooth; }
+            .no-interaction { pointer-events: none; user-select: none; }
+        }
+    </style>
+</head>
+<body class="bg-light scroll-smooth min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-primary to-secondary text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between flex-wrap gap-4">
+                <div class="flex items-center gap-3">
+                    <img src="logo-smkbk.png" alt="Logo SMKBK" class="h-14 w-14 rounded border-2 border-white">
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold">ONE STOP CENTRE</h1>
+                        <p class="text-sm text-accent">Unit Bimbingan & Kaunseling • SMK Buluh Kasap</p>
+                    </div>
+                </div>
+                <button id="menuToggle" class="lg:hidden text-white text-2xl"><i class="fa fa-bars"></i></button>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="#utama" class="hover:text-accent transition-colors font-medium">Utama</a>
+                    <a href="#bahagian" class="hover:text-accent transition-colors font-medium">Bahagian</a>
+                    <a href="#sepkmlink" class="hover:text-accent transition-colors font-medium">SePKM</a>
+                </nav>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden bg-dark/95">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-3">
+                <a href="#utama" class="py-2 hover:text-accent">Utama</a>
+                <a href="#bahagian" class="py-2 hover:text-accent">Bahagian</a>
+                <a href="#sepkmlink" class="py-2 hover:text-accent">SePKM</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- BAHAGIAN UTAMA -->
+        <section id="utama" class="py-16 bg-gradient-to-b from-accent/30 to-white">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center mb-10">
+                    <img src="logo-nadi.png" alt="Logo NADI SMeKS" class="max-w-xs w-full">
+                </div>
+                <div class="text-center mb-12">
+                    <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-primary mb-3">N.A.D.I SMeKS</h2>
+                    <p class="text-[clamp(1rem,2vw,1.3rem)] text-dark italic">Jiwa Dijaga, Potensi Dijana.</p>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Selamat datang ke Portal Digital Unit Bimbingan & Kaunseling SMK Buluh Kasap — pusat sehenti untuk semua perkhidmatan, maklumat dan sumber kaunseling.</p>
+                </div>
+
+                <h3 class="text-2xl font-bold text-center text-primary mb-8">Guru Bimbingan & Kaunseling</h3>
+                <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                        <img src="guru-haslinda.jpg" alt="Pn. Haslinda" class="w-40 h-52 object-cover rounded-lg mx-auto mb-4 border-4 border-secondary/20">
+                        <h4 class="text-xl font-bold text-dark">HASLINDA BINTI MOHD FARIP</h4>
+                        <p class="text-gray-500">Guru Bimbingan & Kaunseling</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                        <img src="guru-nurul.jpg" alt="Pn. Nurul Jalilah" class="w-40 h-52 object-cover rounded-lg mx-auto mb-4 border-4 border-secondary/20">
+                        <h4 class="text-xl font-bold text-dark">NURUL JALILAH BINTI ABD RAHMAN</h4>
+                        <p class="text-gray-500">Guru Bimbingan & Kaunseling</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAHAGIAN 11 -->
+        <section id="bahagian" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-2xl font-bold text-center text-primary mb-10">📂 11 Bahagian Utama</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">🏠</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">1. UTAMA</h4>
+                        <p class="text-sm text-gray-600 mt-1">Maklumat asas, visi misi, jadual, borang & perkhidmatan UBK.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">🗂️</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">2. PENGURUSAN & PENTADBIRAN</h4>
+                        <p class="text-sm text-gray-600 mt-1">Takwim, rekod, profil murid, fail, kewangan & minit mesyuarat.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">💬</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">3. SESI KAUNSELING</h4>
+                        <p class="text-sm text-gray-600 mt-1">Kaunseling individu, kelompok & impak perkhidmatan.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">🎯</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">4. EMPAT BIDANG UTAMA</h4>
+                        <p class="text-sm text-gray-600 mt-1">Sahsiah, disiplin, kerjaya, psikososial & kesejahteraan mental.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">⭐</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">5. KEPIMPINAN MURID</h4>
+                        <p class="text-sm text-gray-600 mt-1">PRS, Kelab Kaunseling/Kerjaya, SLB & pemimpin kelas.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">📊</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">6. KAJIAN KEPERLUAN PERKHIDMATAN</h4>
+                        <p class="text-sm text-gray-600 mt-1">Instrumen Suara Murid & data respons.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">💡</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">7. KAJIAN TINDAKAN / INOVASI</h4>
+                        <p class="text-sm text-gray-600 mt-1">Dokumentasi kajian tindakan & inovasi UBK.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">🏆</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">8. AMALAN TERBAIK</h4>
+                        <p class="text-sm text-gray-600 mt-1">Koleksi amalan terbaik, grafik, video, laporan & bahan program.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">🤝</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">9. JARINGAN PINTAR BERSAMA AGENSI LUAR</h4>
+                        <p class="text-sm text-gray-600 mt-1">Perkongsian, pelaporan, sijil & kolaborasi bersama agensi luar.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">👨‍👩‍👧‍👦</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">10. KONSULTASI KEIBUBAPAAN</h4>
+                        <p class="text-sm text-gray-600 mt-1">Program Ziarah Cakna, konsultasi OPR & galeri dokumentasi.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">🎓</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">11. MAKLUMAT MURID SMKBK</h4>
+                        <p class="text-sm text-gray-600 mt-1">Borang Tingkatan 5, data kelas & maklumat keseluruhan murid.</p>
+                    </div>
+                    <div class="bg-accent/20 rounded-xl p-5 card-hover border border-secondary/20">
+                        <span class="text-2xl">📋</span>
+                        <h4 class="font-bold text-lg text-primary mt-2">BASE OSC UBK</h4>
+                        <p class="text-sm text-gray-600 mt-1">Rekod & data asas One Stop Centre.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SePKM -->
+        <section id="sepkmlink" class="py-16 bg-gradient-to-b from-accent/30 to-white">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-2xl font-bold text-primary mb-4">📝 Sistem e-Perkhidmatan Kaunseling Murid</h3>
+                <p class="text-gray-600 mb-6">Laporan Harian Sistem e-Perkhidmatan Kaunseling Murid (SePKM)</p>
+                <a href="https://www.sepkm.com/e/login/" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all">
+                    <i class="fa fa-external-link mr-2"></i> Buka SePKM
+                </a>
+            </div>
+        </section>
+
+        <!-- Paparan Fail Google Drive -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-2xl font-bold text-center text-primary mb-8">📁 Paparan Fail & Dokumen</h3>
+                <p class="text-center text-gray-500 mb-8 italic">Bahan dikemaskini secara automatik dari sumber utama • Hanya untuk paparan sahaja</p>
+                <div class="bg-gray-50 rounded-xl border border-gray-200 p-4 relative">
+                    <iframe 
+                        src="https://drive.google.com/embeddedfolderview?id=19zCJH4y9bhmwDXcN6rZEiO--hEkVH0WW#list" 
+                        style="width:100%; height:600px; border:0; border-radius:0.5rem;" 
+                        title="Dokumen UBK SMKBK"
+                        loading="lazy"
+                        sandbox="allow-scripts allow-same-origin">
+                    </iframe>
+                    <div class="absolute inset-0 bg-white/50 pointer-events-none flex items-center justify-center rounded-xl">
+                        <span class="text-xs text-gray-500 bg-white/80 px-3 py-1 rounded-full">Hanya untuk paparan • Tidak boleh dimuat turun / disalin / dicetak</span>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-400 mt-3">⚠️ Kemas kini kandungan dilakukan terus melalui Google Drive • Laman web akan memaparkan versi terkini secara automatik</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg font-semibold mb-2">N.A.D.I SMeKS — Jiwa Dijaga, Potensi Dijana.</p>
+            <p class="text-sm text-gray-400 mb-4">Unit Bimbingan & Kaunseling • SMK Buluh Kasap</p>
+            <p class="text-sm text-accent font-medium">Design by @5Lin</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => 
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'))
+        );
+    </script>
+</body>
+</html>
